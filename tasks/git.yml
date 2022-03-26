@@ -1,0 +1,5 @@
+---
+- name: cloning personal repositories
+  git:
+    repo: 'https://github.com/macacobarrigudo/.dotfile.git'
+    dest: ~

@@ -1,0 +1,15 @@
+---
+- name: install some lsp languages server
+  community.general.npm:
+    name: "{{ lsp }}"
+    global: true
+    state: present
+  vars:
+    lsp:
+      - bash_language_server
+
+- name: install bats a test suit for bash scripts
+  community.general.npm:
+    name: bats
+    global: true
+    state: present

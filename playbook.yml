@@ -1,0 +1,7 @@
+---
+- name: config my workstation
+  hosts: localhost
+  connection: local
+  become: true
+  tasks:
+  - include: tasks/core.yml
