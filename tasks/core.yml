@@ -17,6 +17,7 @@
       - npm
       - jq
       - stow
+      - xclip
 
 - name: install docker
   shell: "curl -fsSL https://get.docker.com | sudo bash"
