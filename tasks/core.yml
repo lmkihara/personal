@@ -24,6 +24,12 @@
   shell: "curl -fsSL https://get.docker.com | sudo bash"
   register: install_docker
 
+- name: install kind
+  ansible.builtin.get_url:
+    url: https://kind.sigs.k8s.io/dl/v0.14.0/kind-linux-amd64
+    dest: ~/.local/bin/kind
+    mode: '0744'
+
 - name: install powerline10k
   shell: "git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" 
   register: install_powerline10k
